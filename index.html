@@ -22,7 +22,7 @@
 	color: #fff;
     animation: text-shadow .75s linear infinite;
     display: flex;
-    text-align: center;git 
+    text-align: center;
 }
 
 @keyframes text-shadow {
@@ -47,8 +47,7 @@
 	}
 }
     
-    </style>
-    <style>
+
     @media all and (min-width:960px) and (max-width: 1080px) {
         body {
             background-image: url("assets/1.jpg");
@@ -175,4 +174,17 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+<script>
+$(document).ready(function(){
+    $.urlParam = function(name){
+	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	return results[1] || 0;
+}
+var name = $.urlParam('q');
+$(".username").html(name);
+});
+
+</script>
+
+
 </html>
