@@ -181,7 +181,9 @@ $(document).ready(function(){
 	return results[1] || 0;
 }
 var name = $.urlParam('q');
-$(".username").html(name);
+var avoid="+";
+var finalName=name.replace(avoid,' ');
+$(".username").html(finalName);
 });
 
 </script>
