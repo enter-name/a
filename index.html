@@ -28,7 +28,7 @@
     display: flex;
     text-align: center;
     margin-top : 9%;
-    margin-bottom: 5%;
+    margin-bottom: 17%;
     font-size:50px;
 }
 @keyframes text-shadow {
@@ -51,7 +51,7 @@
     
       body {
         background-image: url("assets/mobile.png"); 
-        background-size: 100% 70%;
+        background-size: 100% 60%;
             background-repeat: no-repeat;
             margin-bottom:20px; 
           }
@@ -120,6 +120,13 @@ right: 20px;
     position: absolute;
     bottom: 10%;
 }
+.ourWish{
+    font-family: "Jacques Francois Shadow", cursive;
+    color:lavenderblush;
+    font-weight: 700;
+    outline: 4px rgba(50, 6, 43, 1) solid;
+font-size: 20px;
+}
     </style>
 </head>
 <body>
@@ -127,10 +134,12 @@ right: 20px;
         <!-- <div class="backdrop shibuya">
                 <p class="text shibuya">Shibuya</p>
             </div> -->
-        
+    
             <div class="world">
+                <marquee class="ourWish">“<b class="wish"></b> wishing you in advance Happy Friendship Day!”</marquee>
             <h1 class="username">Name</h1>
-            <a href="whatsapp://send?text=Hey, Please open this website to buy this material at this price. www.xyz.com" data-original-title="whatsapp" rel="tooltip" class="btn btn-default btn-lg btn-block fixed-bottom" id="whatsapps" data-placement="left" > <i class="fab fa-whatsapp" style='font-size:32px'></i></a>
+            <!-- whatsapp://send?text=Hey, Please open this website to buy this material at this price. www.xyz.com -->
+            <a href="" data-original-title="whatsapp" rel="tooltip" class="btn btn-default btn-lg btn-block fixed-bottom" id="whatsapps" data-placement="left" > <i class="fab fa-whatsapp" style='font-size:32px'></i></a>
         </div>
         </div>
             
@@ -183,6 +192,10 @@ var avoid="+";
 var finalName=name.replace(avoid,' ');
 $(".username").html(finalName);
 $(".text").html(finalName);
+$(".wish").html(finalName);
+var text="whatsapp://send?text=apke friend ne apke liye kuch special bheja hai aaj. 😁 😇 <br /> dekho to click kar ke <br /> enter-name.github.io/a/?q="+name;
+$("#whatsapps").attr("href", text);
+
 });
 </script>
 </html>
